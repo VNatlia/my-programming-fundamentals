@@ -28,7 +28,7 @@ int main () {
         int a = 0;
 
         bool result = !a;
-        cout << "result: " << boolalpha << res << endl;
+        cout << "result: " << boolalpha << result << endl;
     }
 
     return 0;
