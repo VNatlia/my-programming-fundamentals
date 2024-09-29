@@ -21,14 +21,14 @@ int main () {
      
         //  empty (! (A != B) &&  (C < D))
        bool result = (!(a != b) && (c < d));
-       cout << "res: " << boolalpha << result << endl;
+       cout << "result: " << boolalpha << result << endl;
     }
 
     {
         int a = 0;
 
         bool res = !a;
-        cout << "res: " << boolalpha << res << endl;
+        cout << "result: " << boolalpha << res << endl;
     }
 
     return 0;
