@@ -19,9 +19,9 @@ int main () {
         int   d = 59;
 
      
-        //  empty (! (A != B) && (< (C < D)))
-        bool res = (!(a != b) &&  (  <(c < d)));
-        cout << "res: " << boolalpha << res << endl;
+        //  empty (! (A != B) &&  (C < D))
+       bool result = (!(a != b) && (c < d));
+       cout << "res: " << boolalpha << result << endl;
     }
 
     {
@@ -54,7 +54,7 @@ int main() {
 
     int *C = &b;
 
-    // Обчислення виразу
+    // Обчислення виразу 
     int result = (a ^ *C) / (b * d) < (e * (b >> sizeof(f)));
 
    
