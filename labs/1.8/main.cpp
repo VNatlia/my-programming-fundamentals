@@ -8,7 +8,7 @@ int main()
     int am = 63;
 
     // Оператор вибору if-else 
-    if (am> 0)
+    if  (am> 0)
          cout << "am є додатнім числом\n";
     else
          cout << "am є від'ємним або нуль\n";
