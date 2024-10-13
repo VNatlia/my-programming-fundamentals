@@ -1,4 +1,12 @@
+/**
+ * Done by:
+ * Student Name: Volynets Natalia
+ * Student Group: 121
+ * Lab 1.5
+ */
+
 #include <iostream>
+using namespace std;
 
 int main() {
 
