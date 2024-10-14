@@ -67,6 +67,15 @@ int main()
         i++;
     } while (i <= 5);
     cout << "Сума чисел від 1 до 5 (do-while): " << sum1 << endl;
+    // Цикл do-while для знаходження суми чисел від 1 до 5
+    int sum1 = 0;
+    int i = 1;
+    do
+    {
+        sum1 += i;
+        i++;
+    } while (i <= 5);
+    cout << "Сума чисел від 1 до 5 (do-while): " << sum1 << endl;
 
     // Цикл while для знаходження суми чисел від 1 до 5
     int sum2 = 0;
@@ -74,25 +83,36 @@ int main()
     while (i <= 5)
     {
         sum2 += i;
-        i++;
+        // Цикл while для знаходження суми чисел від 1 до 5
+        int sum2 = 0;
+        i = 1;
+        while (i <= 5)
+        {
+            sum2 += i;
+            i++;
+        }
+        cout << "Сума чисел від 1 до 5 (while): " << sum2 << endl;
+
+        // Цикл for для знаходження суми чисел від 1 до 5
+        int sum3 = 0;
+        for (int j = 1; j <= 5; j++)
+        {
+            sum3 += j;
+        }
+        cout << "Сума чисел від 1 до 5 (for): " << sum3 << endl;
+
+        // ЗАВДАННЯ2
+        //  Операція "Лічильник збільшення на 1"
+        int c = 63;
+        int resultA = nA + 1;
+        int resultC = c + 1;
+        cout << "Лічильник збільшення на 1 для nA: " << resultA << endl;
+        cout << "Лічильник збільшення на 1 для c: " << resultC << endl;
+        int resultA = nA + 1;
+        int resultC = c + 1;
+        cout << "Лічильник збільшення на 1 для nA: " << resultA << endl;
+        cout << "Лічильник збільшення на 1 для c: " << resultC << endl;
+
+        return 0;
     }
-    cout << "Сума чисел від 1 до 5 (while): " << sum2 << endl;
-
-    // Цикл for для знаходження суми чисел від 1 до 5
-    int sum3 = 0;
-    for (int j = 1; j <= 5; j++)
-    {
-        sum3 += j;
-    }
-    cout << "Сума чисел від 1 до 5 (for): " << sum3 << endl;
-
-    // ЗАВДАННЯ2
-    //  Операція "Лічильник збільшення на 1"
-    int c = 63;
-    int resultA = nA + 1;
-    int resultC = c + 1;
-    cout << "Лічильник збільшення на 1 для nA: " << resultA << endl;
-    cout << "Лічильник збільшення на 1 для c: " << resultC << endl;
-
-    return 0;
 }
