@@ -1,5 +1,7 @@
 #include <iostream>
 #include <bitset>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -21,94 +23,31 @@ int main()
             cout << "Число не парне " << nA << endl;
         }
     }
+    // 2. Підрахунок кількості одиничних бітів
 
-    // Операція відношення ">"
+    int nB = 766688;
+    int kivi = 0; //використ для підрахунку кількості 1-чок
+    cout << "Число " << nB << " у двійковій системі: " << bitset<32>(nB) << endl;
+
+    int count = sizeof(int)*8;
+    for (int i = 0; i < count; i++) //від 0 до 12
     {
-        int b1 = 34, b2 = 2;
-        int nA = 88;
-        if (nA > b1)
-        {
-            cout << "nA (" << nA << ") більше за b1 (" << b1 << ")" << endl;
-        }
-        else
-        {
-            cout << "nA (" << nA << ") не більше за b1 (" << b1 << ")" << endl;
-        }
-
-        if (nA > b2)
-        {
-            cout << "nA (" << nA << ") більше за b2 (" << b2 << ")" << endl;
-        }
-        else
-        {
-            cout << "nA (" << nA << ") не більше за b2 (" << b2 << ")" << endl;
-        }
+        if (nB & (1 << i)) 
+            kivi++; //якщо на позиції не нульовий рез то збільшуєм
     }
 
-    // Оператор switch
-    {
-        int nA = 88;
-        int nB = 10;
-        switch (nA)
-        {
-        case 63:
-            nB *= 1; // якщо nA = 63, то nB залишається без змін
-            cout << "nA = 63, nB залишається без змін: " << nB << endl;
-            break;
-        case 64:
-            nB *= 2; // якщо nA = 64, то nB збільшується в 2 рази
-            cout << "nA = 64, nB збільшується в 2 рази: " << nB << endl;
-            break;
-        default:
-            nB *= 0; // якщо nA не дорівнює 63 або 64, то nB = 0
-            cout << "nA не дорівнює 63 або 64, тому nB = 0: " << nB << endl;
-            break;
-        }
-    }
+    cout << "Кількість одиниць: " << kivi << endl;
 
-    // Цикл do-while для знаходження суми чисел від 1 до 5
-    {
-        int sum1 = 0;
-        int i = 1;
-        do
-        {
-            sum1 += i;
-            i++;
-        } while (i <= 5);
-        cout << "Сума чисел від 1 до 5 (do-while): " << sum1 << endl;
-    }
+    // 3. Перевірка встановленого біта на певній позиції
 
-    // Цикл while для знаходження суми чисел від 1 до 5
-    {
-        int sum2 = 0;
-        int i = 1;
-        while (i <= 5)
-        {
-            sum2 += i;
-            i++;
-        }
-        cout << "Сума чисел від 1 до 5 (while): " << sum2 << endl;
-    }
+    int nC = 165;
+    int bibi = 5;
+//якщо на 5-ій позиції 0, то 0, якщо 1 - 1
+    cout << "Число " << nC << " у двійковій системі: " << bitset<32>(nC) << endl;
 
-    // Цикл for для знаходження суми чисел від 1 до 5
-    {
-        int sum3 = 0;
-        for (int j = 1; j <= 5; j++)
-        {
-            sum3 += j;
-        }
-        cout << "Сума чисел від 1 до 5 (for): " << sum3 << endl;
-    }
+    cout << bool(nC & (1 << bibi)) << endl;  //bool-t/f
 
-    // ЗАВДАННЯ2
-    //  Операція "Лічильник збільшення на 1"
-    {
-        int c = 63;
-        int nA = 88;
-        int resultA = nA + 1;
-        int resultC = c + 1;
-        cout << "Лічильник збільшення на 1 для nA: " << resultA << endl;
-        cout << "Лічильник збільшення на 1 для c: " << resultC << endl;
-    }
     return 0;
 }
+    
+    

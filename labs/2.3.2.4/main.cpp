@@ -65,18 +65,25 @@ int evaluatePostfix(const string& expression)
 {
     stack<int> operands;  // Стек для операндів
 
-    for (char c : expression) {
+    for (char c : expression) 
+    {
         // Якщо символ операнд (цифра), перетворюємо її на число і додаємо до стека
-        if (isdigit(c)) {
+        if (isdigit(c))
+        {
             operands.push(c - '0');  // Перетворення символу цифри на число
         }
         // Якщо символ оператор, обчислюємо вираз
-        else {
+        else if (c == '+' || c == '-' || c == '*' || c == '/')
+        {
             int operand2 = operands.top(); operands.pop(); // Другий операнд
             int operand1 = operands.top(); operands.pop(); // Перший операнд
             int result = performOperation(operand1, operand2, c); // Обчислюємо операцію
             operands.push(result);  // Додаємо результат до стека
         }
+          else
+          {
+            throw invalid_argument("Postfix expression contains invalid characters.");
+          }
     }
 
     return operands.top();  // Останній елемент у стеці - це результат
