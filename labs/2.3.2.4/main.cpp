@@ -98,6 +98,5 @@ int main()
     cin >> orange;
     cout << evaluatePostfix(infixToPostfix(orange));
 
-
     return 0;
 }
