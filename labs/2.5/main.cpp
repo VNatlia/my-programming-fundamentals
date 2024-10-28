@@ -25,31 +25,31 @@ int main() {
     addToFront(&head, 20);
     addToFront(&head, 30);
 
-    std::cout << "List after adding elements: ";
+    std::cout << "Список після додавання елементів: ";
     printList(head); // виводимо список після додавання елементів
 
     int searchValue = 20; // задаємо значення , яке будемо шукати в списку
     Node* foundNode = searchElement(head, searchValue); //тут викликаєм функцію пошуку
     if (foundNode) { //якщо вузол знайдено то
-        std::cout << "Element " << searchValue << " found in the list." << std::endl;
+        std::cout << "Елемент " << searchValue << " знайдено в цьому листі" << std::endl;
     } else { // якщо вузол не знайдено
-        std::cout << "Element " << searchValue << " not found in the list." << std::endl;
+        std::cout << "Улемент " << searchValue << " не знайдено" << std::endl;
     }
 
     removeFromEnd(&head); // тут видаляємо останній елемент
-    std::cout << "List after removing last element: ";
+    std::cout << "Після видалення останнього елемента: ";
     printList(head); // виводимо список після видалення
 
     reverseList(&head); // перевертаємо список
-    std::cout << "List after reversing: ";
+    std::cout << "Список після реверсу ";
     printList(head); // виводимо список після реверсу
 
     sortList(&head); // сортуємо список
-    std::cout << "List after sorting: ";
+    std::cout << "Список після сортування: ";
     printList(head); // тут виводим список після сортування
 
     clearList(&head); //очищаєм список
-    std::cout << "List after clearing: ";
+    std::cout << "Список після очищення: ";
     printList(head); // тут виводим порожній список
 
     return 0;
