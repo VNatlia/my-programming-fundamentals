@@ -1,3 +1,5 @@
+//Volynets Natalia group 121 FCST variant 8
+
 #include <iostream>
 //#include <vector> // цей рядок закоментований, оскільки я думала використовувати бібліотеку vector
 using namespace std;
